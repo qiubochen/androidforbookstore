@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RRetrofit {
-    public static String BASE_URL = "http://10.0.2.2:8080";
+    public static String BASE_URL = "http://120.25.229.177:8080";
     public static <T> T create(final Class<T> cls) {
         Retrofit.Builder builder = new Retrofit.Builder();
         Retrofit retrofit = builder

@@ -48,7 +48,8 @@
                 android:id="@+id/reButtonRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="register" />
+                android:text="register"
+                android:background="#803367d6"/>
 
         </LinearLayout>
 

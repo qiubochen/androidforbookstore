@@ -3,6 +3,7 @@ package com.example.qiu.bookstore;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,12 +31,16 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
+        editTextForPassword=(EditText) findViewById(R.id.reEditPassword);
+
         buttonToRegister=(Button)findViewById(R.id.reButtonRegister);
+        editTextForPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
         buttonToRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editTextForPassword=(EditText) findViewById(R.id.reEditPassword);
+
                 editTextForUserName=(EditText)findViewById(R.id.reEditUserName);
+
                 String strForPassword=editTextForPassword.getText().toString();
                 String strForUserName=editTextForUserName.getText().toString();
                 if(strForPassword.equals("")||strForUserName.equals("")){
@@ -70,6 +75,7 @@ public class Register extends AppCompatActivity {
                               if(responseUserController.getStatus().equals("200")){
                                   Intent intent=new Intent();
                                   intent.setClass(Register.this,MainActivity.class);
+                                  intent.putExtra("flag",true);
                                   startActivity(intent);
                               }
                             }

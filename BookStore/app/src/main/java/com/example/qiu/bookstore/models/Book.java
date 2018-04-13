@@ -18,6 +18,25 @@ public class Book implements Serializable{
     private int isDelete;
     private int isBuy;
     private String bookCategory;
+    private int isActivity;
+
+    public int getIsActivity() {
+        return isActivity;
+    }
+
+    public void setIsActivity(int isActivity) {
+        this.isActivity = isActivity;
+    }
+
+    //    private Date orderCurrentDate;
+//
+//    public Date getOrderCurrentDate() {
+//        return orderCurrentDate;
+//    }
+//
+//    public void setOrderCurrentDate(Date orderCurrentDate) {
+//        this.orderCurrentDate = orderCurrentDate;
+//    }
 
     public String getBookCategory() {
         return bookCategory;

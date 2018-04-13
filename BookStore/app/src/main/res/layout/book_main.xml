@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/packpage_vPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.0" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary" />
+    <RadioGroup
+        android:id="@+id/main_navi_radiogroup"
+        style="@style/main_navi_radiogroup">
+
+        <RadioButton
+            android:id="@+id/main_navi_msg_records"
+            style="@style/main_navi_radiobutton"
+            android:drawableTop="@drawable/menu_item_msg_records"
+            android:text="购物车"/>
+
+        <RadioButton
+            android:id="@+id/main_navi_contact"
+            style="@style/main_navi_radiobutton"
+            android:drawableTop="@drawable/menu_item_contacts"
+            android:text="详情页" />
+
+    </RadioGroup>
+</LinearLayout>

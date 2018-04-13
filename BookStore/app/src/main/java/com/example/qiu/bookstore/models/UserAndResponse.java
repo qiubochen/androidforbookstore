@@ -3,13 +3,14 @@ package com.example.qiu.bookstore.models;
 import java.io.Serializable;
 
 /**
- * Created by qiu on 2017/12/23.
+ * Created by qiu on 2017/12/27.
  */
 
-public class User implements Serializable{
+public class UserAndResponse implements Serializable{
     private int id;
     private String name;
     private String password;
+    private String status;
 
     public int getId() {
         return id;
@@ -33,5 +34,13 @@ public class User implements Serializable{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
